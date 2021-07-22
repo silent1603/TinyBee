@@ -1,0 +1,58 @@
+[submodule "TinyBee/vendors/assimp"]
+	path = TinyBee/vendors/assimp
+	url = https://github.com/assimp/assimp.git
+	branch = master
+[submodule "TinyBee/vendors/imgui"]
+	path = TinyBee/vendors/imgui
+	url = https://github.com/ocornut/imgui.git
+	branch = docking
+[submodule "TinyBee/vendors/bullet"]
+	path = TinyBee/vendors/bullet
+	url = https://github.com/bulletphysics/bullet3.git
+	branch = master
+[submodule "TinyBee/vendors/box2d"]
+	path = TinyBee/vendors/box2d
+	url = https://github.com/erincatto/box2d.git
+	branch = master
+[submodule "TinyBee/vendors/glfw"]
+	path = TinyBee/vendors/glfw
+	url = https://github.com/glfw/glfw.git
+	branch = master
+[submodule "TinyBee/vendors/catch2"]
+	path = TinyBee/vendors/catch2
+	url = https://github.com/catchorg/Catch2.git
+	branch = devel
+[submodule "TinyBee/vendors/glad"]
+	path = TinyBee/vendors/glad
+	url = https://github.com/Dav1dde/glad.git
+	branch = c
+[submodule "TinyBee/vendors/stb"]
+	path = TinyBee/vendors/stb
+	url = https://github.com/nothings/stb.git
+	branch = master
+[submodule "TinyBee/vendors/spdlog"]
+	path = TinyBee/vendors/spdlog
+	url = https://github.com/gabime/spdlog.git
+[submodule "TinyBee/vendors/glm"]
+	path = TinyBee/vendors/glm
+	url = https://github.com/g-truc/glm.git
+	branch = master
+[submodule "TinyBee/vendors/entt"]
+	path = TinyBee/vendors/entt
+	url = https://github.com/skypjack/entt.git
+	branch = master
+[submodule "TinyBee/vendors/imguizmo"]
+	path = TinyBee/vendors/imguizmo
+	url = https://github.com/CedricGuillemet/ImGuizmo.git
+	branch = master
+[submodule "TinyBee/vendors/opengl"]
+	path = TinyBee/vendors/opengl
+	url = https://github.com/kcat/openal-soft.git
+	branch = master
+[submodule "TinyBee/vendors/yaml"]
+	path = TinyBee/vendors/yaml
+	url = https://github.com/jbeder/yaml-cpp.git
+	branch = master
+[submodule "TinyBee/vendors/nlohmann"]
+	path = TinyBee/vendors/nlohmann
+	url = https://github.com/nlohmann/json.git
