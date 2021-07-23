@@ -1,0 +1,39 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/TinyBee/include",
+                "${workspaceFolder}/TinyBee/vendors/assimp/include",
+                "${workspaceFolder}/TinyBee/vendors/box2d/include",
+                "${workspaceFolder}/TinyBee/vendors/catch2/src",
+                "${workspaceFolder}/TinyBee/vendors/entt/single_include",
+                "${workspaceFolder}/TinyBee/vendors/entt/src",
+                "${workspaceFolder}/TinyBee/vendors/glad/include",
+                "${workspaceFolder}/TinyBee/vendors/glfw/include",
+                "${workspaceFolder}/TinyBee/vendors/glm/glm",
+                "${workspaceFolder}/TinyBee/vendors/imgui/",
+                "${workspaceFolder}/TinyBee/vendors/imgui/backends",
+                "${workspaceFolder}/TinyBee/vendors/imguizmo",
+                "${workspaceFolder}/TinyBee/vendors/nlohmann/include",
+                "${workspaceFolder}/TinyBee/vendors/nlohmann/single_include",
+                "${workspaceFolder}/TinyBee/vendors/spdlog/include",
+                "${workspaceFolder}/TinyBee/vendors/stb",
+                "${workspaceFolder}/TinyBee/vendors/yaml/include",
+                "${workspaceFolder}/TinyBee/vendors/openal/include",
+                    
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.19041.0",
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30037/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}
