@@ -45,10 +45,6 @@
 	path = TinyBee/vendors/imguizmo
 	url = https://github.com/CedricGuillemet/ImGuizmo.git
 	branch = master
-[submodule "TinyBee/vendors/opengl"]
-	path = TinyBee/vendors/opengl
-	url = https://github.com/kcat/openal-soft.git
-	branch = master
 [submodule "TinyBee/vendors/yaml"]
 	path = TinyBee/vendors/yaml
 	url = https://github.com/jbeder/yaml-cpp.git
@@ -56,3 +52,6 @@
 [submodule "TinyBee/vendors/nlohmann"]
 	path = TinyBee/vendors/nlohmann
 	url = https://github.com/nlohmann/json.git
+[submodule "TinyBee/vendors/openal"]
+	path = TinyBee/vendors/openal
+	url = https://github.com/kcat/openal-soft.git
