@@ -1,0 +1,8 @@
+[submodule "tinylb/external/imgui"]
+	path = tinylb/external/imgui
+	url = https://github.com/ocornut/imgui.git
+	branch = docking
+[submodule "tinylb/external/imguizmo"]
+	path = tinylb/external/imguizmo
+	url = https://github.com/CedricGuillemet/ImGuizmo.git
+	branch = master
