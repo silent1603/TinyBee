@@ -4,7 +4,7 @@ import os,platform
 class HelloConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
 
-    requires = "glfw/3.3.4","yaml-cpp/0.6.3","tinyxml2/8.0.0","fmt/7.1.3","spdlog/1.8.5","nlohmann_json/3.9.1","entt/3.7.1","openal/1.21.1","glad/0.1.34","freetype/2.10.4","glm/0.9.9.8","assimp/5.0.1","bullet3/3.17","stb/20200203","lua/5.4.1","catch2/2.13.6","box2d/2.4.1"
+    requires = "glfw/3.3.4","sdl/2.0.16","yaml-cpp/0.6.3","tinyxml2/8.0.0","fmt/7.1.3","spdlog/1.8.5","nlohmann_json/3.9.1","entt/3.7.1","openal/1.21.1","glad/0.1.34","freetype/2.10.4","glm/0.9.9.8","assimp/5.0.1","bullet3/3.17","stb/20200203","lua/5.4.1","catch2/2.13.6","box2d/2.4.1"
 
     generators = "cmake"
 
@@ -21,6 +21,7 @@ class HelloConan(ConanFile):
     def imports(self): 
         #include path
         self.copy("*.*",dst = HelloConan.externalVendorPath,src = "include",root_package="glfw",folder = False,keep_path = True)
+        self.copy("*.*",dst = HelloConan.externalVendorPath,src = "include",root_package="sdl",folder = False,keep_path = True)
         self.copy("*.*", dst=HelloConan.externalVendorPath, src="include",root_package="glad", folder=False, keep_path=True)
         self.copy("*.*",dst = HelloConan.externalVendorPath,src = "include",root_package="spdlog",folder = False,keep_path = True)
         self.copy("*.*",dst = HelloConan.externalVendorPath,src = "include",root_package="nlohmann_json",folder = False,keep_path = True)

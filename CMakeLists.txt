@@ -95,6 +95,7 @@ target_include_directories(TinyLB PRIVATE ${PROJECT_EXTERNAL_INCLUDE}
                             PRIVATE ${VENDOR_PATHS}/tinyxml2 
                             PRIVATE ${VENDOR_PATHS}/imgui/backends 
                             PRIVATE ${VENDOR_PATHS}/yaml-cpp
+                            PRIVATE ${VENDOR_PATHS}/SDL2 
                             #PRIVATE ${Vulkan_INCLUDE_DIRS}      
                             
 )
