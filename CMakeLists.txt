@@ -11,6 +11,8 @@ set(SHADER_PATHS ${PROJECT_PATH}/shaders)
 set(PROJECT_EXTERNAL_SRC ${PROJECT_PATH}/src)
 set(PROJECT_EXTERNAL_INCLUDE ${PROJECT_PATH}/include)
 set(VENDOR_PATHS ${PROJECT_PATH}/external)
+set(RESOURCE_PATH ${PROJECT_PATH}/resources)
+
 
 if(WIN32)
 list(APPEND LIB_PATHS "${CMAKE_BINARY_DIR}/bin")
@@ -55,8 +57,9 @@ file(GLOB PROJECT_VENDOR_SRC ${VENDOR_PATHS}/imgui/*.cpp
                                      ${VENDOR_PATHS}/imgui/backends/imgui_impl_opengl3.cpp 
                                      ${VENDOR_PATHS}/imgui/backends/imgui_impl_glfw.cpp 
                                      ${VENDOR_PATH}/imguizmo/*cpp )
-Message(STATUS ${PROJECT_VENDOR_SRC})
-file(GLOB PROJECT_SHADERS   ${SHADER_PATHS}/*.comp ${SHADER_PATHS}/*.frag ${SHADER_PATHS}/*.geom ${SHADER_PATHS}/*.vert)
+
+file(GLOB_RECURSE PROJECT_SHADERS   ${SHADER_PATHS}/*.comp ${SHADER_PATHS}/*.frag ${SHADER_PATHS}/*.geom ${SHADER_PATHS}/*.vert)
+file(GLOB_RECURSE PROJECT_RESOURCES ${RESOURCE_PATH}/*.*)
 file(GLOB PROJECT_CONFIGS   CMakeLists.txt Readme.md .gitattributes .gitignore .gitmodules conanfile.py conanfile.txt LICENSE README.md)
 
 source_group(TREE ${PROJECT_PATH} FILES ${PROJECT_APP})
@@ -65,10 +68,11 @@ source_group(TREE ${PROJECT_PATH} FILES ${PROJECT_EXTERNAL_SOURCES})
 source_group(TREE ${PROJECT_PATH} FILES ${PROJECT_EXTERNAL_HEADERS})
 source_group(TREE ${PROJECT_PATH} FILES ${PROJECT_VENDOR_HEADER})
 source_group(TREE ${PROJECT_PATH} FILES ${PROJECT_VENDOR_SRC})
+source_group(TREE ${PROJECT_PATH} FILES ${PROJECT_RESOURCES})
 source_group(TREE ${PROJECT_SOURCE_DIR} FILES ${PROJECT_CONFIGS})
 
 
-add_executable(TinyLB  ${PROJECT_EXTERNAL_HEADERS} ${PROJECT_VENDOR_HEADER} ${PROJECT_VENDOR_SRC} ${PROJECT_EXTERNAL_SOURCES} ${PROJECT_APP} ${PROJECT_SHADERS} ${PROJECT_CONFIGS} )
+add_executable(TinyLB  ${PROJECT_EXTERNAL_HEADERS} ${PROJECT_VENDOR_HEADER} ${PROJECT_VENDOR_SRC} ${PROJECT_EXTERNAL_SOURCES} ${PROJECT_APP} ${PROJECT_SHADERS} ${PROJECT_CONFIGS} ${PROJECT_RESOURCES})
 
 
 add_subdirectory(tinylb)
