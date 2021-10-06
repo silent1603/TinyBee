@@ -47,17 +47,43 @@ target_include_directories(ET PRIVATE ${VENDOR_PATHS}
                             PRIVATE ${VENDOR_PATHS}/imgui/backends 
                             PRIVATE ${VENDOR_PATHS}/stb/ 
                             PRIVATE ${VENDOR_PATHS}/glm/ 
-                            PRIVATE ${VENDOR_PATHS}/box2d/include/ 
+                            PRIVATE ${VENDOR_PATHS}/box2d/include 
                             PRIVATE ${VENDOR_PATHS}/catch2/src 
                             PRIVATE ${VENDOR_PATHS}/spdlog/include 
                             PRIVATE ${VENDOR_PATHS}/entt/src 
                             PRIVATE ${VENDOR_PATHS}/freetype/include 
+                            PRIVATE ${VENDOR_PATHS}/openal/include 
+                            PRIVATE ${VENDOR_PATHS}/glfw/include 
+                            PRIVATE ${VENDOR_PATHS}/assimp/include 
+                            PRIVATE ${VENDOR_PATHS}/bullet/src 
 )
 
 # set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 # set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 # set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR})
-set_target_properties( ${PROJECT_NAME} SDL2 SDL2main Glad box2d Catch2 Catch2WithMain spdlog freetype
+set_target_properties( ${PROJECT_NAME} SDL2 
+                                       SDL2main 
+                                       Glad 
+                                       box2d 
+                                       Catch2 
+                                       Catch2WithMain 
+                                       spdlog 
+                                       freetype 
+                                       OpenAL 
+                                       glfw 
+                                       assimp 
+                                       BulletDynamics 
+                                       BulletCollision 
+                                       LinearMath 
+                                       BulletSoftBody 
+                                       BulletInverseDynamics 
+                                       Bullet2FileLoader 
+                                       Bullet3OpenCL_clew 
+                                       Bullet3Geometry 
+                                       Bullet3Dynamics 
+                                       Bullet3Collision 
+                                       Bullet3Common 
+
     PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/lib"
     LIBRARY_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/lib"
@@ -75,6 +101,12 @@ target_link_libraries(ET PUBLIC SDL2
                          PUBLIC spdlog::spdlog 
                          PUBLIC EnTT::EnTT 
                          PUBLIC freetype 
+                         PUBLIC OpenAL 
+                         PUBLIC glfw 
+                         PUBLIC assimp 
+                         PUBLIC BulletDynamics 
+                         PUBLIC BulletCollision 
+                         PUBLIC LinearMath 
                          PUBLIC ${OPENGL_gl_LIBRARY})
 if(UNIX AND NOT APPLE)
 target_link_libraries(ET PUBLIC ${CMAKE_DL_LIBS})

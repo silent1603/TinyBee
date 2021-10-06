@@ -37,3 +37,19 @@
 	path = vendors/freetype
 	url = https://gitlab.freedesktop.org/freetype/freetype.git
 	branch = master
+[submodule "vendors/openal"]
+	path = vendors/openal
+	url = https://github.com/kcat/openal-soft.git
+	branch = master
+[submodule "vendors/glfw"]
+	path = vendors/glfw
+	url = https://github.com/glfw/glfw.git
+	branch = master
+[submodule "vendors/assimp"]
+	path = vendors/assimp
+	url = https://github.com/assimp/assimp.git
+	branch = master
+[submodule "vendors/bullet"]
+	path = vendors/bullet
+	url = https://github.com/bulletphysics/bullet3.git
+	branch = master
